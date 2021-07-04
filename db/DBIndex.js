@@ -54,7 +54,7 @@ userDBOperations.registerUser = (user) => {
 }
 
 userDBOperations.login = (user)=> {
-    const query = `SELECT emailid from user WHERE user_email=${user.emailid} and user_password=${user.password}`;
+    const query = `SELECT * from user WHERE emailid='${user.emailid}' and password='${user.password}'`;
 
     return new Promise((resolve,reject)=>{
         pool.query(query,(err,result)=>{
