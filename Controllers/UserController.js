@@ -1,6 +1,6 @@
 const db = require('../db/DBIndex');
 
-module.exports.getUser = async (req,req)=>{
+module.exports.getUser = async (req,res)=>{
 
     try{
         const results = await db.getAllUsers();
